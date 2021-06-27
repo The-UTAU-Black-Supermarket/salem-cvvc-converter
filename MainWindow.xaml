@@ -1,0 +1,54 @@
+﻿<Window x:Class="LengthRandomizer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        xmlns:local="clr-namespace:LengthRandomizer"
+        mc:Ignorable="d"
+        Title="SalemCVVC Converter" Height="200" Width="300">
+    <DockPanel Margin="10">
+        <StackPanel Orientation="Horizontal" DockPanel.Dock="Bottom" HorizontalAlignment="Right">
+            <Button Margin="0,0,10,0" Padding="5" Click="Cancel">Cancel</Button>
+            <Button Padding="5" Click="OK">OK</Button>
+        </StackPanel>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+
+            <Label Grid.Row="0" Grid.Column="0">Original format</Label>
+            <ComboBox Grid.Row="0" Grid.Column="1" Margin="0,0,0,10">
+                <ComboBoxItem IsSelected="True">English words</ComboBoxItem>
+                <ComboBoxItem>Lite Basic</ComboBoxItem>
+                <ComboBoxItem>Lite Standard</ComboBoxItem>
+                <ComboBoxItem>Lite Expanded</ComboBoxItem>
+                <ComboBoxItem>Full Basic</ComboBoxItem>
+                <ComboBoxItem>Full Standard</ComboBoxItem>
+                <ComboBoxItem>Full Expanded</ComboBoxItem>
+            </ComboBox>
+            
+            <Label Grid.Row="1" Grid.Column="0">New format</Label>
+            <ComboBox Grid.Row="1" Grid.Column="1" Margin="0,0,0,10">
+                <ComboBoxItem>Lite Basic</ComboBoxItem>
+                <ComboBoxItem>Lite Standard</ComboBoxItem>
+                <ComboBoxItem>Lite Expanded</ComboBoxItem>
+                <ComboBoxItem>Full Basic</ComboBoxItem>
+                <ComboBoxItem IsSelected="True">Full Standard</ComboBoxItem>
+                <ComboBoxItem>Full Expanded</ComboBoxItem>
+            </ComboBox>
+        </Grid>
+
+        <!--<StackPanel Orientation="Vertical">
+            <Label>Randomization amount</Label>
+            <xctk:IntegerUpDown Name="amount" Margin="5" DefaultValue="30" 
+                                Minimum="0" Maximum="240" DisplayDefaultValueOnEmptyText="True"/>
+        </StackPanel>-->
+    </DockPanel>
+</Window>
